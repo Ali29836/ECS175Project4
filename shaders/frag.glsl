@@ -1,7 +1,7 @@
 #version 300 es
 precision mediump float;
 
-
+//all the shader files are referenced from https://github.com/sessamekesh/IndigoCS-webgl-tutorials.git
 // Passed in from the vertex shader
 in vec3 v_color;
 uniform vec3 viewPos;
