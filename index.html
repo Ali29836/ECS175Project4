@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="header-container">
+            <h1>Assignment 2</h1>
+            <h2>3D Transformation and Viewing | <a
+                    href="https://canvas.ucdavis.edu/courses/595787/assignments/718397">Instructions</a></h2>
+        </div>
+        <div class="settings-container">
+            <div class="modes-container">
+                <h3>Camera Mode</h3>
+                <div class="modes">
+                    <div id="fpsCamMode" class="indicator inactive">FPS</div>
+                    <div id="statCamMode" class="indicator inactive">Stationary</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <h3>Projection Mode</h3>
+                <div class="modes">
+                    <div id="perspProjMode" class="indicator inactive">[P]erspective</div>
+                    <div id="orthoProjMode" class="indicator inactive">[O]rthographic</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <!-- do ids stack? -->
+                <h3>Selection</h3>
+                <div class="modes">
+                    <div id="selectionRaycasting" class="indicator inactive">[R]aycast</div>
+                    <div id="selectionTarget" class="indicator inactive">No Target Selected</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <h3>Shading</h3>
+                <div class="modes">
+                    <div id="wireframeShading" class="indicator inactive">[1] Wireframe</div>
+                    <div id="flatShading" class="indicator inactive">[2] Flat Wireframe</div>
+                </div>
+            </div>
+
+            
+            <div class="modes-container">
+                <h3>ShadingModel</h3>
+                <div class="modes">
+                    <div id="PhongShading" class="indicator inactive">[G] Phong</div>
+                    <div id="GouraudShading" class="indicator inactive">[D] Gouraud</div>
+                    <div id="FlatShading" class="indicator inactive">[F] Flat</div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class = "modes-container">
+                <h3>Ka</h3>
+                <div class="modes">
+                    <input type = "range" min = "0" max = "1" step = "0.1" value = "0.5" class = "myslider" id = "KaSlider">
+                </div>
+                <h3>Kd</h3>
+                <div class="modes">
+                    <input type = "range" min = "0" max = "1" step = "0.1" value = "0.5" class = "myslider" id = "KdSlider">
+                </div>
+                <h3>Ks</h3>
+                <div class="modes">
+                    <input type = "range" min = "0" max = "1" step = "0.1" value = "0.5" class = "myslider" id = "KsSlider">
+                </div>
+            </div>
+
+
+            <div class = "modes-container">
+                <h3>LightInt_x</h3>
+                <div class="modes">
+                    <input type = "range" min = "0" max = "1" step = "0.1" value = "0.5" class = "myslider" id = "LightIntx">
+                </div>
+                <h3>LightInt_y</h3>
+                <div class="modes">
+                    <input type = "range" min = "0" max = "1" step = "0.1" value = "0.5" class = "myslider" id = "LightInty">
+                </div>
+                <h3>LightInt_z</h3>
+                <div class="modes">
+                    <input type = "range" min = "0" max = "1" step = "0.1" value = "0.5" class = "myslider" id = "LightIntz">
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+        <div id="webgl-container">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+    <script src="lib/gl-matrix-min.js"></script>
+    <script type="text/javascript">
+        const {mat2, mat3, mat4, vec2, vec3, vec4, quat} = glMatrix;
+    </script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
